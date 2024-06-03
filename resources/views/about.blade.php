@@ -1,13 +1,13 @@
 @extends('layout.app')
 @section('body')
-<?php include_once('layout/header.php'); ?>
+
 
     <body>
-       <?php include_once('layout/menu.php'); ?>
+       
         <main>
             
            <!-- breadcrumb-area -->
-            <section class="breadcrumb-area d-flex  p-relative align-items-center" style="background-image:url(img/bg/bdrc-bg.png)">
+            <section class="breadcrumb-area d-flex  p-relative align-items-center" style="background-image:url({{asset('web/img/bg/bdrc-bg.png')}})">
               
                 <div class="container">
                     <div class="row align-items-center">
@@ -23,7 +23,7 @@
                               
                                 <nav aria-label="breadcrumb">
                                     <ol class="breadcrumb">
-                                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                        <li class="breadcrumb-item"><a href="{{route('index')}}">Home</a></li>
                                         <li class="breadcrumb-item active" aria-current="page">About Us</li>
                                     </ol>
                                 </nav>
@@ -40,7 +40,7 @@
                    <div class="row justify-content-center align-items-center">
                         <div class="col-lg-6 col-md-12 col-sm-12">
                            <div class="s-about-img p-relative  wow fadeInLeft animated" data-animation="fadeInLeft" data-delay=".4s">
-                               <img src="images/snc_college.jpeg" alt="img">   
+                               <img src="{{asset('web/images/snc_college.jpeg')}}" alt="img">   
                               <!-- <div class="about-text second-about">
                                    <span>24 <sub>+</sub></span> 
                                    <p>Years of Experience</p>
@@ -61,7 +61,7 @@
                                   
                                </div>
                                 <div class="slider-btn mt-20">                                          
-                                    <a href="about.php" class="btn ss-btn smoth-scroll">Read More <i class="fal fa-long-arrow-right"></i></a>				
+                                    <a href="{{route('aboutus')}}" class="btn ss-btn smoth-scroll">Read More <i class="fal fa-long-arrow-right"></i></a>				
                                </div>
                            </div>
                        </div>
@@ -292,8 +292,8 @@
             <!-- steps-area-end -->
            <!-- testimonial-area -->
             <section class="testimonial-area pt-120 pb-115 p-relative fix">
-                 <div class="animations-01"><img src="img/bg/an-img-03.png" alt="an-img-01"></div>
-                <div class="animations-02"><img src="img/bg/an-img-04.png" alt="contact-bg-an-01"></div>
+                 <div class="animations-01"><img src="{{asset('web/img/bg/an-img-03.png')}}" alt="an-img-01"></div>
+                <div class="animations-02"><img src="{{asset('web/img/bg/an-img-04.png')}}s" alt="contact-bg-an-01"></div>
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-12">
@@ -311,7 +311,7 @@
                             <div class="testimonial-active wow fadeInUp animated" data-animation="fadeInUp" data-delay=".4s">
                                 <div class="single-testimonial text-center">
                                      <div class="qt-img">
-                                    <img src="img/testimonial/qt-icon.png" alt="img">
+                                    <img src="{{asset('web/img/testimonial/qt-icon.png')}}" alt="img">
                                     </div>
                                     <p>It's good college, facilities are good, big playground, supporting from teachers .In summer vacation college provides  many activities.</p>
                                     <!-- <div class="testi-author">
@@ -324,7 +324,7 @@
                                 </div>
                                 <div class="single-testimonial text-center">
                                      <div class="qt-img">
-                                    <img src="img/testimonial/qt-icon.png" alt="img">
+                                    <img src="{{asset('web/img/testimonial/qt-icon.png')}}" alt="img">
                                     </div>
                                     <p>One of the best study environment for the children's at affordable fee......The teachers are professional, caring and well organised.</p>
                                     <!-- <div class="testi-author">
@@ -337,7 +337,7 @@
                                 </div>
                               <div class="single-testimonial text-center">
                                      <div class="qt-img">
-                                    <img src="img/testimonial/qt-icon.png" alt="img">
+                                    <img src="{{asset('web/img/testimonial/qt-icon.png')}}" alt="img">
                                     </div>
                                     <p>Maintained well disciplin in college, also faculties are more supportive and caring.</p>
                                     <!-- <div class="testi-author">
@@ -359,5 +359,5 @@
          
         </main>
         <!-- main-area-end -->
-        <?php include_once('layout/footer.php'); ?>
+        
 @endsection

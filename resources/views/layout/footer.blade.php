@@ -47,10 +47,10 @@
                                 </div>
                                 <div class="footer-link">
                                     <ul>                                        
-                                        <li><a href="index.php">Home</a></li>
-                                        <li><a href="about.php"> About</a></li>
+                                        <li><a href="{{route('index')}}">Home</a></li>
+                                        <li><a href="{{route('aboutus')}}"> About US</a></li>
                                         <!-- <li><a href="courses.html">Courses</a></li> -->
-                                        <li><a href="contact.php"> Contact Us</a></li>
+                                        <li><a href="{{route('contactus')}}"> Contact US</a></li>
                                         <!-- <li><a href="blog.html">Blog </a></li> -->
                                     </ul>
                                 </div>
@@ -104,7 +104,7 @@
                     <div class="row align-items-center">
                         <div class="col-lg-4">
                           <div class="copy-text">
-                                <a href="index.php"><img src="{{ asset('web/images/snc.jpeg') }}" alt="img" style="height:70px;width:70px;"></a>   
+                                <a href="{{route('index')}}"><img src="{{ asset('web/images/snc.jpeg') }}" alt="img" style="height:70px;width:70px;"></a>   
                             </div>
                         </div>
                        

@@ -54,7 +54,7 @@
                         <div class="row align-items-center">
                              <div class="col-xl-3 col-lg-3">
                                 <div class="logo">
-                                    <a href="index.php"><img src="{{ asset('web/images/snc.jpeg') }}" style="width:70px;" alt="logo"></a>
+                                    <a href="{{route('index')}}"><img src="{{ asset('web/images/snc.jpeg') }}" style="width:70px;" alt="logo"></a>
                                 </div>
                             </div>
                            <div class="col-xl-6 col-lg-6">
@@ -63,9 +63,9 @@
                                     <nav id="mobile-menu">
                                           <ul>
                                             <li>
-                                                <a href="index.php">Home</a>
+                                                <a href="{{route('index')}}">Home</a>
                                             </li>
-                                            <li><a href="about.php">About Us</a></li>        
+                                            <li><a href="{{route('aboutus')}}">About Us</a></li>        
                                             
                                             <!-- <li class="has-sub">
                                                <a href="courses.html">Courses</a>
@@ -97,7 +97,7 @@
                                             </li> -->
 
 
-                                            <li><a href="contact.php">Contact</a></li>                                               
+                                            <li><a href="{{route('contactus')}}">Contact</a></li>                                               
                                         </ul>
                                     </nav>
                                 </div>
@@ -108,7 +108,7 @@
                                         
                                         <li>
                                             <div class="second-header-btn">
-                                               <a href="contact.php" class="btn">admission open</a>
+                                               <a href="{{route('contactus')}}" class="btn">admission open</a>
                                             </div>
                                         </li>
                                     </ul>
@@ -124,32 +124,5 @@
             </div>
         </header>
         <!-- header-end -->
-        <!-- offcanvas-area -->
-          <div class="offcanvas-menu">
-             <span class="menu-close"><i class="fas fa-times"></i></span>
-             <form role="search" method="get" id="searchform"   class="searchform" action="http://wordpress.zcube.in/xconsulta/">
-                <input type="text" name="s" id="search" placeholder="Search"/>
-                <button><i class="fa fa-search"></i></button>
-             </form>
-             <div id="cssmenu3" class="menu-one-page-menu-container">
-                <ul  class="menu">
-                   <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="index.html">Home</a></li>
-                   <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="about.html">About Us</a></li>
-                   <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="courses.html">Courses</a></li>
-                   <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="pricing.html">Pricing </a></li>
-                   <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="team.html">Teacher</a></li>
-                   <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="projects.html">Gallery</a></li>
-                   <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="blog.html">Blog</a></li>
-                   <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="contact.html">Contact</a></li>
-                </ul>
-             </div>
-             <div id="cssmenu2" class="menu-one-page-menu-container">
-                <ul id="menu-one-page-menu-12" class="menu">
-                   <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="#home"><span>+8 12 3456897</span></a></li>
-                   <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="#howitwork"><span>info@example.com</span></a></li>
-                </ul>
-             </div>
-          </div>
-          <div class="offcanvas-overly"></div>
-          <!-- offcanvas-end -->
+         
         <!-- main-area -->

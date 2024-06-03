@@ -18,8 +18,8 @@
                                          <h2 data-animation="fadeInUp" data-delay=".4s">Education is the best key success in life</h2>
                                         
                                           <div class="slider-btn mt-30">     
-                                            <a href="about.php" class="btn ss-btn mr-15" data-animation="fadeInLeft" data-delay=".4s">Discover More <i class="fal fa-long-arrow-right"></i></a>
-                                            <a href="contact.php" class="btn ss-btn active" data-animation="fadeInLeft" data-delay=".4s">Contact Us <i class="fal fa-long-arrow-right"></i></a>
+                                            <a href="{{route('aboutus')}}" class="btn ss-btn mr-15" data-animation="fadeInLeft" data-delay=".4s">Discover More <i class="fal fa-long-arrow-right"></i></a>
+                                            <a href="{{route('contactus')}}" class="btn ss-btn active" data-animation="fadeInLeft" data-delay=".4s">Contact Us <i class="fal fa-long-arrow-right"></i></a>
                                         </div>        
                                                               
                                     </div>
@@ -30,7 +30,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="single-slider slider-bg" style="background-image: url(img/slider/slider_bg_01.png); background-size: cover;">
+                    <div class="single-slider slider-bg" style="background-image: url({{asset('web/img/slider/slider_bg_01.png')}}); background-size: cover;">
                         <div class="container">
                            <div class="row">
                               
@@ -40,8 +40,8 @@
                                          <h2 data-animation="fadeInUp" data-delay=".4s">Education is the best key success in life</h2>
                                        
                                           <div class="slider-btn mt-30">     
-                                            <a href="about.php" class="btn ss-btn mr-15" data-animation="fadeInLeft" data-delay=".4s">Discover More <i class="fal fa-long-arrow-right"></i></a>
-                                            <a href="contact.html" class="btn ss-btn active" data-animation="fadeInLeft" data-delay=".4s">Contact Us <i class="fal fa-long-arrow-right"></i></a>
+                                            <a href="{{route('aboutus')}}" class="btn ss-btn mr-15" data-animation="fadeInLeft" data-delay=".4s">Discover More <i class="fal fa-long-arrow-right"></i></a>
+                                            <a href="{{route('contactus')}}" class="btn ss-btn active" data-animation="fadeInLeft" data-delay=".4s">Contact Us <i class="fal fa-long-arrow-right"></i></a>
                                         </div>        
                                                               
                                     </div>
@@ -123,7 +123,7 @@
                     <div class="row justify-content-center align-items-center">
                          <div class="col-lg-6 col-md-12 col-sm-12">
                             <div class="s-about-img p-relative  wow fadeInLeft animated" data-animation="fadeInLeft" data-delay=".4s">
-                                <img src="images/snc_college.jpeg" alt="img">   
+                                <img src="{{ asset('web/images/snc_college.jpeg')}}" alt="img">   
                                <!-- <div class="about-text second-about">
                                     <span>24 <sub>+</sub></span> 
                                     <p>Years of Experience</p>
@@ -144,7 +144,7 @@
                                    
                                 </div>
                                  <div class="slider-btn mt-20">                                          
-                                     <a href="about.php" class="btn ss-btn smoth-scroll">Read More <i class="fal fa-long-arrow-right"></i></a>				
+                                     <a href="{{route('aboutus')}}" class="btn ss-btn smoth-scroll">Read More <i class="fal fa-long-arrow-right"></i></a>				
                                 </div>
                             </div>
                         </div>
@@ -624,8 +624,8 @@
             <!-- video-area-end -->	
             <!-- testimonial-area -->
             <section class="testimonial-area pt-120 pb-115 p-relative fix">
-                 <div class="animations-01"><img src="img/bg/an-img-03.png" alt="an-img-01"></div>
-                <div class="animations-02"><img src="img/bg/an-img-04.png" alt="contact-bg-an-01"></div>
+                 <div class="animations-01"><img src="{{asset('web/img/bg/an-img-03.png')}}" alt="an-img-01"></div>
+                <div class="animations-02"><img src="{{asset('web/img/bg/an-img-04.png')}}" alt="contact-bg-an-01"></div>
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-12">
@@ -643,7 +643,7 @@
                             <div class="testimonial-active wow fadeInUp animated" data-animation="fadeInUp" data-delay=".4s">
                                 <div class="single-testimonial text-center">
                                      <div class="qt-img">
-                                    <img src="img/testimonial/qt-icon.png" alt="img">
+                                    <img src="{{asset('web/img/testimonial/qt-icon.png')}}" alt="img">
                                     </div>
                                     <p>It's good college, facilities are good, big playground, supporting from teachers .In summer vacation college provides  many activities.</p>
                                     <!-- <div class="testi-author">
@@ -656,7 +656,7 @@
                                 </div>
                                 <div class="single-testimonial text-center">
                                      <div class="qt-img">
-                                    <img src="img/testimonial/qt-icon.png" alt="img">
+                                    <img src="{{asset('web/img/testimonial/qt-icon.png')}}" alt="img">
                                     </div>
                                     <p>One of the best study environment for the children's at affordable fee......The teachers are professional, caring and well organised.</p>
                                     <!-- <div class="testi-author">
@@ -669,7 +669,7 @@
                                 </div>
                               <div class="single-testimonial text-center">
                                      <div class="qt-img">
-                                    <img src="img/testimonial/qt-icon.png" alt="img">
+                                    <img src="{{asset('web/img/testimonial/qt-icon.png')}}" alt="img">
                                     </div>
                                     <p>Maintained well disciplin in college, also faculties are more supportive and caring.</p>
                                     <!-- <div class="testi-author">
