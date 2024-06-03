@@ -1,12 +1,13 @@
-<?php include_once('layout/header.php'); ?>
 
+@extends('layout.app')
+@section('body')
     <body>
-       <?php include_once('layout/menu.php'); ?>
+       
         <!-- main-area -->
         <main>
             
            <!-- breadcrumb-area -->
-            <section class="breadcrumb-area d-flex  p-relative align-items-center" style="background-image:url(img/bg/bdrc-bg.png)">
+            <section class="breadcrumb-area d-flex  p-relative align-items-center" style="background-image:url({{asset('web/img/bg/bdrc-bg.png')}})">
               
                 <div class="container">
                     <div class="row align-items-center">
@@ -21,7 +22,7 @@
                               
                                 <nav aria-label="breadcrumb">
                                     <ol class="breadcrumb">
-                                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                        <li class="breadcrumb-item"><a href="{{route('index')}}">Home</a></li>
                                         <li class="breadcrumb-item active" aria-current="page">Contact Us</li>
                                     </ol>
                                 </nav>
@@ -52,7 +53,7 @@
                              
                           <div class="services-box text-center">
                               <div class="services-icon">
-                                   <img src="img/bg/contact-icon01.png" alt="image">
+                                   <img src="{{('web/img/bg/contact-icon01.png')}}" alt="image">
                                 </div>
                                <div class="services-content2">
                                     <h6><a href="tel:07712243085">0771- 2243085</a></h6>  
@@ -71,11 +72,15 @@
                              
                           <div class="services-box text-center active">
                               <div class="services-icon">
-                                  <img src="img/bg/contact-icon02.png" alt="image">
+                                  <img src="{{asset('web/img/bg/contact-icon02.png')}}" alt="image">
                                 </div>
                                <div class="services-content2">
-                                    <h4><a href="mailto:shantiniketan2009@yahoo.co.in">shantiniketan2009@yahoo.co.in</a></h4>   
+                                    <h6><a href="mailto:shantiniketan2009@yahoo.co.in">shantiniketan2009@yahoo.co.in</a></h6>   
                                     </br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
                                      
                                 </div>
                             </div>   
@@ -86,11 +91,15 @@
                              
                           <div class="services-box text-center">
                               <div class="services-icon">
-                                 <img src="img/bg/contact-icon03.png" alt="image">
+                                 <img src="{{asset('web/img/bg/contact-icon03.png')}}" alt="image">
                                 </div>
                                <div class="services-content2">
                                     <h6>Ring Road No.1, Near Pani Tanki,</h6>   
                                     <h6>Changorbhatha, Raipur, Chhattisgarh, 492001</h6>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
                                 </div>
                             </div>   
                              
@@ -207,4 +216,4 @@
             <!-- brand-area-end -->        
         </main>
         <!-- main-area-end -->
-        <?php include_once('layout/footer.php'); ?>
+        @endsection
