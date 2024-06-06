@@ -65,7 +65,12 @@
                                             <li>
                                                 <a href="{{route('index')}}">Home</a>
                                             </li>
-                                            <li><a href="{{route('aboutus')}}">About Us</a></li>        
+                                            <li>
+                                                <a href="{{route('aboutus')}}">About Us</a>
+                                            </li>
+                                            <li>
+                                                <a href="{{route('ourgallery')}}">Gallery</a>
+                                            </li>         
                                             
                                             <!-- <li class="has-sub">
                                                <a href="courses.html">Courses</a>
