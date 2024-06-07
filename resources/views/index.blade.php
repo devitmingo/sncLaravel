@@ -56,66 +56,7 @@
                     
                
             </section>
-            <!-- slider-area-end -->
-             <!-- service-area -->
-            <!-- <section class="service-details-two p-relative">
-                <div class="container">
-                    <div class="row">
-                      
-                        <div class="col-lg-4 col-md-12 col-sm-12">
-                            <div class="services-box07">
-                                
-                             <div class="sr-contner">
-                                <div class="icon">
-                                <img src="img/icon/sve-icon4.png" alt="icon01">
-                                </div>
-                                <div class="text">
-                                    <h5><a href="about.php">Aim and Objectives</a></h5>
-                                    <p>The aim of Shantiniketan is to produce a new generation of professionals read up the chalenges of industry & indian</p>
-                                    <a href="about.php">Read More <i class="fal fa-long-arrow-right"></i></a>
-                                </div>
-                             </div>
-                                
-                                
-                            </div>
-                        </div>
-                         <div class="col-lg-4 col-md-12 col-sm-12">
-                            <div class="services-box07 active">
-                                <div class="sr-contner">
-                                <div class="icon">
-                                <img src="img/icon/sve-icon5.png" alt="icon01">
-                                </div>
-                                <div class="text">
-                                    <h5><a href="about.php">Philosophy</a></h5>
-                                    <p>The Shantiniketan College Believes in the culture of excellence focusing itself on socioeconomic challenges ...</p>
-                                    <a href="about.php">Read More <i class="fal fa-long-arrow-right"></i></a>
-                                </div>
-                             </div>
-                               
-                            </div>
-                        </div>
-                        
-					 <div class="col-lg-4 col-md-12 col-sm-12">
-                            <div class="services-box07">
-                                <div class="sr-contner">
-                                <div class="icon">
-                                <img src="img/icon/sve-icon6.png" alt="icon01">
-                                </div>
-                                <div class="text">
-                                    <h5><a href="about.php">Our mission </a></h5>
-                                    <p>To promote and provide the opportunity for participation in the learning process by those with the</p>
-                                    <a href="about.php">Read More <i class="fal fa-long-arrow-right"></i></a>
-                                </div>
-                             </div>
-                                
-                            </div>
-                        </div>
-                     
-                    </div>
-                </div>
-            </section> -->
-            <!-- service-details2-area-end -->
-            
+           
              <!-- about-area -->
             <section class="about-area about-p pt-120 pb-120 p-relative fix" style="background: #eff7ff;">
                
@@ -124,10 +65,7 @@
                          <div class="col-lg-6 col-md-12 col-sm-12">
                             <div class="s-about-img p-relative  wow fadeInLeft animated" data-animation="fadeInLeft" data-delay=".4s">
                                 <img src="{{ asset('web/images/snc_college.jpeg')}}" alt="img">   
-                               <!-- <div class="about-text second-about">
-                                    <span>24 <sub>+</sub></span> 
-                                    <p>Years of Experience</p>
-                                </div> -->
+                              
                             </div>
                           
                         </div>
@@ -153,6 +91,44 @@
                 </div>
             </section>
             <!-- about-area-end -->
+            <section class="team-area fix p-relative pt-150 pb-80" style="background: #f7f9ff;">  
+            <div class="animations-06"><img src="{{ asset('web/img/bg/an-img-17.png') }}" alt="an-img-01"></div>
+            <div class="animations-09"><img src="{{ asset('web/img/bg/slider_shape03.png') }}" alt="contact-bg-an-01"></div>
+                <div class="container">  
+                    <div class="row">   
+                    <div class="col-lg-12 p-relative">
+                           <div class="section-title center-align mb-50 text-center wow fadeInDown animated" data-animation="fadeInDown" data-delay=".4s">
+                                 <h5><i class="fal fa-graduation-cap"></i> Our Core Team</h5>
+                                <h2>
+                                  Our Core Team 
+                                </h2>
+                             
+                            </div>
+                        </div>                        
+                         
+                    </div>
+                   <div class="row">  
+                     @foreach($emp as $row)    
+                        <div class="col-xl-3 col-md-6">
+                            <div class="single-team mb-40" >
+                                <div class="team-thumb">
+                                    <div class="brd">
+                                        
+                                        <a href="#"> <img src="{{asset('uploads/emp/'.$row->image)}}" alt="img"></a>
+                                        
+                                    </div>
+                                </div>
+                                <div class="team-info">
+                                    <h4><a href="#">{{ $row->name }}</a></h4>
+                                    <p>{{ $row->desiganation }}</p>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        @endforeach
+                       </div>
+                </div>
+            </section>
              <!-- courses-area -->
             <section class="courses pt-120 pb-120 p-relative fix">
                  <div class="animations-01"><img src="{{asset('web/img/bg/an-img-03.png')}}" alt="an-img-01"></div>
@@ -208,6 +184,10 @@
                                             </a>
                                         </div>
                                          @endforeach
+                                         
+                                </div>
+                                <div class="slider-btn mt-20">                                          
+                                     <a href="{{route('ourgallery')}}" class="btn ss-btn smoth-scroll">View More <i class="fal fa-long-arrow-right"></i></a>				
                                 </div>
                             </div>
                         </div>

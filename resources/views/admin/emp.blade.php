@@ -23,44 +23,19 @@
                             <div class="form-group col-md-4">
                                 <label for="">Name</label>
                                 <input type="text" name="name" class="form-control" placeholder="Enter Name" value="{{ old('name',isset($data->name) ? $data->name : '' ) }}">
-                            </div>
-                            <div class="form-group col-md-4">
-                                <label for="">Father Name</label>
-                                <input type="text" name="fatherName"class="form-control" placeholder="Enter Father Name" value="{{ old('fatherName',isset($data->fatherName) ? $data->fatherName : '' ) }}">
-                            </div>
-                            <div class="form-group col-md-4">
-                                <label for="">Mother Name</label>
-                                <input type="text" name="motherName" class="form-control" placeholder="Enter Mother Name" value="{{ old('motherName',isset($data->motherName) ? $data->motherName : '' ) }}">
-                            </div>
-                            <div class="form-group col-md-4">
-                                <label for="">Email</label>
-                                <input type="email" name="email" class="form-control" placeholder="Enter Email" value="{{ old('email',isset($data->email) ? $data->email : '' ) }}">
-                            </div>
-                            <div class="form-group col-md-4">
-                                <label for="">Mobile</label>
-                                <input type="tel" name="mobile"class="form-control" placeholder="Enter Mobile" value="{{ old('mobile',isset($data->mobile) ? $data->mobile : '' ) }}">
-                            </div>
-                            <div class="form-group col-md-4">
-                                <label for="">DOB</label>
-                                <input type="date" name="dob"class="form-control" value="{{ old('dob',isset($data->dob) ? $data->dob : '' ) }}">
-                            </div>
-                            <div class="form-group col-md-4">
-                                <label for="">Address</label>
-                                <input type="text-area" class="form-control" name="address" placeholder="Address" value="{{ old('address',isset($data->address) ? $data->address : '' ) }}">
-                            </div>
+                            </div>                 
                             <div class="form-group col-md-4">
                                 <label for="">Desiganation</label>
                                 <input type="text" class="form-control" name="desiganation" placeholder="Desiganation" value="{{ old('desiganation',isset($data->desiganation) ? $data->desiganation : '' ) }}">
                             </div>
                             <div class="form-group col-md-4">
-                                <label for="">Gender</label>
-                                <select class="form-control" name="gender" id="gender">
-                                    <option value="">-- Select --</option>
-                                    <option value="M">Male</option>
-                                    <option value="F">Female</option>
-                                    <option value="O">Other</option>
-                                </select>
-                                <script>$('#gender').val('{{ old('gender',isset($data->gender) ? $data->gender : '' ) }}').attr("selected", "selected");</script>
+                                <label for="">Status</label>
+                                    <select class="form-control" name="status">
+                                        <option value="">-- Select --</option>
+                                        <option value="0">Enable</option>
+                                        <option value="1">Disable</option>
+                                    </select>
+                                    <script>$('#status').val('{{ old('status',isset($data->status) ? $data->status : '' ) }}').attr("selected", "selected");</script>
                             </div>
                             <div class="form-group col-md-4">
                                 <label for="">Image</label>@if(isset($data->image))<img src="{{isset($data->image)}}" alt="#" width="50" height="60" >@endif

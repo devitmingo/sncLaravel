@@ -19,10 +19,6 @@
                     <tr>
                         <th>#</th>
                         <th>Name</th>
-                        <th>Father Name</th>
-                        <th>Mother Name</th>
-                        <th>Email</th>
-                        <th>Mobile</th>
                         <th>Desiganation</th>
                         <th>Status</th>
                         <th>Image</th>
@@ -35,10 +31,6 @@
                             <tr>
                                 <td>{{ $loop->index+1 }}</td>
                                 <td>{{ $row->name }}</td>
-                                <td>{{ $row->fatherName }}</td>
-                                <td>{{ $row->motherName }}</td>
-                                <td>{{ $row->email }}</td>
-                                <td>{{ $row->mobile }}</td>
                                 <td>{{ $row->desiganation }}</td>
                                 <td>{{ ($row->status==1) ? 'Disable' : 'Enable'  }}</td>
                                 <td><img src="{{asset('uploads/emp/'.$row->image)}}" alt="#" width="50" height="60" /></td>
