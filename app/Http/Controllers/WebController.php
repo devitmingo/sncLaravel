@@ -8,7 +8,7 @@ use App\Models\Employee;
 
 class WebController extends Controller
 {
-    public function index(){
+    public function index(Request $request){
         $gallery = Gallery::where('status',0)->limit(4)->get();
         $emp = Employee::where('status',0)->get();
         return view('index',compact('gallery','emp'));
