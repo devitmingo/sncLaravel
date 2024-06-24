@@ -6,6 +6,8 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\GalleryController;
+use App\Http\Controllers\NoticeController;
+
 
 
 Route::get('/', [WebController::class, 'index'])->name('index');
@@ -26,4 +28,6 @@ Route::get('/contact-us',[WebController::class,'contactus'])->name('contactus');
     Route::get('/dashboard',[AdminController::class,'dashboard'])->name('dashboard');
     Route::resource('/user',UserController::class);
     Route::get('/admin/logout',[AdminController::class,'logout'])->name('logout');
+
+    Route::resource('/notice',NoticeController::class);
  });

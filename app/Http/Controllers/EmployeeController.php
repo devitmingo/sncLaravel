@@ -83,7 +83,7 @@ class EmployeeController extends Controller
         unset($input['_token']);
         Employee::where('id',$employee->id)->update($input);
 
-        return redirect(route('employee.index'))->with('success','Employeer Added Successfully');
+        return redirect(route('employee.index'))->with('success','Employeer Updated Successfully');
     }
 
     /**
