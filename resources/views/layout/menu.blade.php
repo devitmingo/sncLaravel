@@ -70,7 +70,10 @@
                                             </li>
                                             <li>
                                                 <a href="{{route('ourgallery')}}">Gallery</a>
-                                            </li>         
+                                            </li>  
+                                            <li>
+                                                <a href="{{route('noticeboard')}}">Notice</a>
+                                            </li>        
                                             
                                             <!-- <li class="has-sub">
                                                <a href="courses.html">Courses</a>

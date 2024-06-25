@@ -13,7 +13,7 @@ class NoticeController extends Controller
      */
     public function index()
     {
-        $records = Notice::all();
+        $records = notice::all();
         return view ('admin.noticeview',compact('records')); 
     }
 
@@ -39,7 +39,7 @@ class NoticeController extends Controller
             $file->move('uploads/notice/', $filename);
             $input['file'] =$filename;
         }
-        Notice::create($input);
+        notice::create($input);
 
         return redirect(route('notice.index'))->with('success','Notice Added Successfully');
 
@@ -80,7 +80,7 @@ class NoticeController extends Controller
         //$input['createdby'] = Auth::user()->id;
         unset($input['_method']);
         unset($input['_token']);
-        Notice::where('id',$notice->id)->update($input);
+        notice::where('id',$notice->id)->update($input);
 
         return redirect(route('notice.index'))->with('success','Notice Updated Successfully');
     }
@@ -90,7 +90,7 @@ class NoticeController extends Controller
      */
     public function destroy(notice $notice)
     {
-        Notice::where('id',$notice->id)->delete();
+        notice::where('id',$notice->id)->delete();
 
         return redirect(route('notice.index'))->with('success','Employeer deleted Successfully');
     }
