@@ -98,9 +98,9 @@
                     <div class="row">   
                     <div class="col-lg-12 p-relative">
                            <div class="section-title center-align mb-50 text-center wow fadeInDown animated" data-animation="fadeInDown" data-delay=".4s">
-                                 <h5><i class="fal fa-graduation-cap"></i> Our Core Team</h5>
+                                 <h5><i class="fal fa-graduation-cap"></i> Our Team</h5>
                                 <h2>
-                                  Our Core Team 
+                                  Our Team 
                                 </h2>
                              
                             </div>

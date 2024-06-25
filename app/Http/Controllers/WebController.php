@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Gallery;
 use App\Models\Employee;
-use App\Models\Notice;
+use App\Models\notice;
 
 class WebController extends Controller
 {
@@ -25,7 +25,7 @@ class WebController extends Controller
         return view('gallery',compact('gallery'));
     }
     public function noticeboard(){
-        $notice = Notice::where('status',0)->get();
+        $notice = notice::where('status',0)->get();
         return view('notice',compact('notice'));
     }
 }
