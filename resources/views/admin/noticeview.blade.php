@@ -17,23 +17,32 @@
                     <thead>
                     <tr>
                         <th>#</th>
-                        <th>Name</th>
-                        <th>Subject</th>
-                        <th>Description</th>
-                        <th>Status</th>
-                        <th>Edit</th>
-                        <th>Delete</th>
+                        <th>NAME</th>
+                        <th>DEPARTMENT</th>
+                        <th>TITLE</th>
+                        <th>DESCRIPTION</th>
+                        <th>STATUS</th>
+                        <th>UPLOAD DATE</th>
+                        <th>FROM DATE</th>
+                        <th>TO DATE</th>
+                        <th>FILE</th>
+                        <th>EDIT</th>
+                        <th>DELETE</th>
                     </tr>
                     </thead>
                     <tbody>
                       @foreach($records as $row)
                             <tr>
                                 <td>{{ $loop->index+1 }}</td>
-                                <td>{{ $row->name }}</td>
-                                <td>{{ $row->subject }}</td>
-                                <td>{{ $row->description }}</td>
+                                <td>{{ isset($row->name) ? $row->name : '' }}</td>
+                                <td>{{ isset ($row->department)? $row->department : '' }}</td>
+                                <td>{{ isset ($row->title)? $row->title : '' }}</td>
+                                <td>{{ isset ($row->description)? $row->description : '' }}</td>
                                 <td>{{ ($row->status==1) ? 'Disable' : 'Enable'  }}</td>
-                                
+                                <td>{{ isset ($row->upload_date) ? date('d-m-Y',strtotime($row->from_date)) : ''}}</td>
+                                <td>{{ isset($row->from_date) ? date('d-m-Y',strtotime($row->from_date)) : '' }}</td>
+                                <td>{{ isset($row->to_date)? date('d-m-Y',strtotime($row->from_date)) : '' }}</td>
+                                <td>@if($row->file!='')<img src="{{asset('uploads/notice/'.$row->file)}}" alt="#" width="50" height="60" />@endif</td>
                                 <td> <a href="{{ route('notice.edit',$row->id) }}"><i class='fas fa-edit'></i></a></td>
                                 <td>
                                 <form action="{{ route('notice.destroy',$row->id) }}" method="post" >

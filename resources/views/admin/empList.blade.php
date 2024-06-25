@@ -30,10 +30,10 @@
                         @foreach($records as $row)
                             <tr>
                                 <td>{{ $loop->index+1 }}</td>
-                                <td>{{ $row->name }}</td>
-                                <td>{{ $row->desiganation }}</td>
+                                <td>{{ isset($row->name) ? $row->name : '' }}</td>
+                                <td>{{ isset($row->desiganation) ? $row->name : '' }}</td>
                                 <td>{{ ($row->status==1) ? 'Disable' : 'Enable'  }}</td>
-                                <td><img src="{{asset('uploads/emp/'.$row->image)}}" alt="#" width="50" height="60" /></td>
+                                <td>@if($row->image!='')<img src="{{asset('uploads/emp/'.$row->image)}}" alt="#" width="50" height="60" />@endif</td>
                                 <td> <a href="{{ route('employee.edit',$row->id) }}"><i class='fas fa-edit'></i></a></td>
                                 <td>
                                 <form action="{{ route('employee.destroy',$row->id) }}" method="post" >

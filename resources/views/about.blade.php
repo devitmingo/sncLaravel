@@ -55,7 +55,7 @@
                                    <h5><i class="fal fa-graduation-cap"></i> About Us</h5>
                                    <h2>Shantiniketan College</h2>                                   
                                </div>
-                                  <p class="txt-clr"><strong>Shantiniketan College</strong> was established om 2000-01, in the college was promoted by <strong>Late Shri Ramlal Gupta Merorial Education Society </strong>with The motto to serve needy and poor people.</p>
+                                  <p class="txt-clr"><strong>Shantiniketan College</strong> was established on 2000-01, in the college was promoted by <strong>Late Shri Ramlal Gupta Merorial Education Society </strong>with The motto to serve needy and poor people.</p>
                                    <p>It is a persistently flourshing of moral and cultural values,devoted to the cause of social and intellectual upliftment of the budding generation of the nation. The objective is to provide desirable for importing professional education and vocational training.</p>
                                   
                                   

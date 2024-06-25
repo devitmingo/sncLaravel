@@ -19,15 +19,15 @@
                         <div class="form-row">       
                             <div class="form-group col-md-4">
                                 <label for="">Name</label>
-                                <input type="text" name="name" class="form-control" placeholder="Enter Name"value="{{ old('name',isset($data->name) ? $data->name : '' ) }}">
+                                <input type="text" name="name" class="form-control"required placeholder="Enter Name"value="{{ old('name',isset($data->name) ? $data->name : '' ) }}">
                             </div>
                             <div class="form-group col-md-4">
                                 <label for="">Image</label>@if(isset($data->image))<img src="{{asset('uploads/gallery/'.$data->image)}}" style="display:inline-block;" alt="#" width="50" height="60" >@endif
-                                <input type="file" name="image" class="form-control" style="width:70%;display:inline-block;">
+                                <input type="file" name="image" id="image" required class="form-control" style="width:70%;display:inline-block;">
                             </div>
                             <div class="form-group col-md-4">
                                 <label for="">Status</label>
-                                    <select class="form-control" name="status">
+                                    <select class="form-control" name="status" id="status">
                                         <option value="">-- Select --</option>
                                         <option value="0">Enable</option>
                                         <option value="1">Disable</option>
