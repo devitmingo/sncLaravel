@@ -29,8 +29,8 @@
                         @foreach($records as $row)
                             <tr>
                                 <td>{{ $loop->index+1 }}</td>
-                                <td>{{ $row->name }}</td>
-                                <td><img src="{{asset('uploads/gallery/'.$row->image)}}" alt="#" width="50" height="60" /></td>
+                                <td>{{ isset($row->name) ? $row->name : '' }}</td>
+                                c
                                 <td>{{ ($row->status==1) ? 'Disable' : 'Enable'  }}</td>
                                 <td> <a href="{{ route('gallery.edit',$row->id) }}"><i class='fas fa-edit'></i></a></td>
                                 <td>

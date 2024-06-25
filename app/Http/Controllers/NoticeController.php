@@ -30,9 +30,17 @@ class NoticeController extends Controller
      */
     public function store(Request $request)
     {
-        //
         $input = $request->all();
-        notice::create($input);
+        if($request->hasfile('file'))
+        {
+            $file = $request->file('file');
+            $extenstion = $file->getClientOriginalExtension();
+            $filename = time().'.'.$extenstion;
+            $file->move('uploads/notice/', $filename);
+            $input['file'] =$filename;
+        }
+        Notice::create($input);
+
         return redirect(route('notice.index'))->with('success','Notice Added Successfully');
 
     }
@@ -59,15 +67,22 @@ class NoticeController extends Controller
      */
     public function update(Request $request, notice $notice)
     {
-     $input = $request->all();
-            
-            $input['status']=isset($request->status) ? $request->status : 0; 
-            //$input['createdby'] = Auth::user()->id;
-            unset($input['_method']);
+        $input = $request->all();
+        if($request->hasfile('file'))
+        {
+            $file = $request->file('file');
+            $extenstion = $file->getClientOriginalExtension();
+            $filename = time().'.'.$extenstion;
+            $file->move('uploads/notice/', $filename);
+            $input['file'] =$filename;
+        }
+        $input['status']=isset($request->status) ? $request->status : 0; 
+        //$input['createdby'] = Auth::user()->id;
+        unset($input['_method']);
         unset($input['_token']);
-            Notice::where('id',$notice->id)->update($input);
-    
-            return redirect(route('notice.index'))->with('success','Notice Updated Successfully');
+        Notice::where('id',$notice->id)->update($input);
+
+        return redirect(route('notice.index'))->with('success','Notice Updated Successfully');
     }
 
     /**
