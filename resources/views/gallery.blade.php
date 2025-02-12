@@ -43,7 +43,7 @@
                                         @foreach($gallery as $row)
 
                                         <div class="grid-item financial banking">
-                                        <a href="single-projects.html">
+                                        <a href="{{asset('uploads/gallery/'.$row->image)}}" target="_blank">
                                                 <figure class="gallery-image">
                                                 <img src="{{asset('uploads/gallery/'.$row->image)}}" alt="{{ isset($row->name) ? $row->name : '' }}" class="img"> 
                                                 </figure>

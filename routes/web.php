@@ -14,13 +14,14 @@ Route::get('/', [WebController::class, 'index'])->name('index');
 Route::get('/about-us',[WebController::class,'aboutus'])->name('aboutus');
 Route::get('/our-gallery',[WebController::class,'ourgallery'])->name('ourgallery');
 Route::get('/contact-us',[WebController::class,'contactus'])->name('contactus');
+Route::get('/contact-us-save',[WebController::class,'contactusSave'])->name('contactusSave');
 Route::get('/notice-board',[WebController::class,'noticeboard'])->name('noticeboard');
 
 // Admin route 
  Route::get('/login',[AdminController::class,'admin'])->name('admin');
  Route::post('/login',[AdminController::class,'login'])->name('login');
 
- Route::group(['middleware' => 'auth'], function () {
+//  Route::group(['middleware' => 'auth'], function () {
     Route::get('/dashboard',[AdminController::class,'dashboard'])->name('dashboard');
 
     Route::resource('/gallery',GalleryController::class);
@@ -31,4 +32,4 @@ Route::get('/notice-board',[WebController::class,'noticeboard'])->name('noticebo
     Route::get('/admin/logout',[AdminController::class,'logout'])->name('logout');
 
     Route::resource('/notice',NoticeController::class);
- });
+//  });
