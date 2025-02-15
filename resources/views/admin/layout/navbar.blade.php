@@ -7,7 +7,7 @@
       <li class="active"><a href="#">Home</a></li>
       <li><a href="{{ route('gallery.create') }}">Gallery</a></li>
       <li><a href="{{ route('employee.create') }}">Employee</a></li>
-      <li><a href="#">Blog</a></li>
+      <!-- <li><a href="#">Blog</a></li> -->
       <li><a href="{{ route('notice.create') }}">Notice</a></li>
       <li><a href="{{ route('logout') }}">Logout</a></li>
     </ul>
